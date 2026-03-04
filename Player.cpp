@@ -23,11 +23,11 @@ Player::~Player() {
 }
 
 void Player::takeDamage(int damage) {
-    // health - damage
-    if ((health - damage) >= 0) {
-        health -= damage;
+    health -= damage;
+    if (health < 0) {
+        health = 0;
+        cout << name << " fails to the ground, defeated." << endl;
     }
-    // add one more logic
 }
 
 string Player::getName() const {
@@ -47,6 +47,6 @@ int Player::getAttackPower() const {
 }
 
 void Player::displayStatus() const {
-    cout << name << " - HP: " << health << "/" << maxHealth << endl;
+    cout << "[" << name << "]" << " - HP: " << health << "/" << maxHealth << endl;
 }
 
