@@ -2,6 +2,7 @@
 #define PLAYER_H
 
 #include <string>
+#include "Inventory.h"
 
 using namespace std;
 
@@ -11,6 +12,7 @@ class Player {
         int health;
         int maxHealth;
         int attackPower;
+        Inventory inventory;
 
     public: 
         Player(); // default constructor
@@ -22,6 +24,8 @@ class Player {
         int getMaxHealth() const;
         int getAttackPower() const;
         void displayStatus() const;
+        void showInventory() const;
+        void addItem(const Item& item);
 };
 
 #endif

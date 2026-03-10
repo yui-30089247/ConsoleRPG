@@ -50,3 +50,11 @@ void Player::displayStatus() const {
     cout << "[" << name << "]" << " - HP: " << health << "/" << maxHealth << endl;
 }
 
+void Player::showInventory() const {
+    inventory.display();
+}
+
+void Player::addItem(const Item& item) {
+    inventory.addItem(item);
+}
+

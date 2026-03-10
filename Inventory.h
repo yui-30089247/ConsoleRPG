@@ -1,3 +1,6 @@
+#ifndef INVENTORY.H
+#define INVENTORY.H
+
 #include "Item.h"
 
 class Inventory {
@@ -12,3 +15,5 @@ class Inventory {
         bool addItem(const Item& item);
         void display() const;
 };
+
+#endif
