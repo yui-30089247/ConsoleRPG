@@ -10,6 +10,11 @@ Item::Item() {
     value = 0;
 }
 
+Item::Item(string n, int val) {
+    name = n;
+    value = val;
+}
+
 int Item::getTotalItems()  {
     return totalItems;
 }
@@ -20,4 +25,12 @@ void Item::incrementTotalItems() {
 
 void Item::display() const {
     cout << "[" << name << "]" << " " << "(Value: " << "[" << value << "])" << endl;
+}
+
+string Item::getName() const {
+    return name;
+}
+
+int Item::getValue() const {
+    return value;
 }
