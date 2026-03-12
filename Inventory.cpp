@@ -4,6 +4,7 @@
 using namespace std;
 
 Inventory::Inventory() {
+    capacity = 10;
     items = new Item[10];
 }
 
@@ -16,11 +17,10 @@ Inventory::~Inventory() {
 }
 
 bool Inventory::addItem(const Item& item) {
-    cout << "here" << endl;
-    cout << "Capacity: " << capacity << ", itemCount: " << itemCount << endl;
     if (capacity > itemCount) {
+        items[itemCount] = item;
         Item::incrementTotalItems();
-        cout << "An item was added: [" << item.getName() << "]" << endl;
+        cout << "An item was added: " << item.getName() << endl;
         itemCount++;
         return true;
     } else {
@@ -29,6 +29,10 @@ bool Inventory::addItem(const Item& item) {
 }
 
 void Inventory::display() const {
-    items->display();
+    cout << "Inventory (" << itemCount << "/" << capacity << "): " << endl;
+
+    for (int i = 0; i < itemCount; i++) {
+        items[i].display();
+    }
 };
 

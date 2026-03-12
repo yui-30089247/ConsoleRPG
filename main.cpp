@@ -27,14 +27,21 @@ int main() {
 
     // lab 7 test
     Player hero = Player();
-    // cout << "Name is " << hero.getName() << " " << hero.getHealth() << " " << hero.getMaxHealth() << endl;
-    Item item1 = Item();
-    Item item2 = Item();
-    Item item3 = Item();
-
+    Item item1 = Item("Sword", 10);
+    Item item2 = Item("Shield", 15);
+    Item item3 = Item("Axes", 30);
   
     hero.addItem(item1);
+    cout << hero.getName() << " found a ";
+    item1.display();
     hero.addItem(item2);
+    cout << hero.getName() << " found a ";
+    item2.display();
+    hero.addItem(item3);
+    cout << hero.getName() << " found a ";
+    item3.display();
+
+    cout << "--- Hero's Inventory ---" <<  endl;
     hero.showInventory();
-    Item::getTotalItems();
+    cout << "Total items added to inventories: " << Item::getTotalItems() << endl;
 }
