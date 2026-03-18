@@ -10,9 +10,7 @@ Item::Item() {
     value = 0;
 }
 
-Item::Item(string n, int val) {
-    name = n;
-    value = val;
+Item::Item(string n, int val) : name(name), value(value) {
 }
 
 int Item::getTotalItems()  {

@@ -3,13 +3,10 @@
 
 using namespace std;
 
-Inventory::Inventory() {
-    capacity = 10;
-    items = new Item[10];
+Inventory::Inventory() : items(new Item[10]), capacity(10) {
 }
 
-Inventory::Inventory(int capacity) {
-    items = new Item[capacity];
+Inventory::Inventory(int capacity) : items(new Item[capacity]), capacity(capacity), itemCount(0) {
 }
 
 Inventory::~Inventory() {

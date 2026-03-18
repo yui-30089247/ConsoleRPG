@@ -9,20 +9,13 @@ Player::Player() {
     health = 100;
     maxHealth = 100;
     attackPower = 10;
-    inventory = new Inventory[10];
 }
 
-Player::Player(string n, int h, int ap, int limit) {
-    name = n;
-    health = h;
-    attackPower = ap;
-    maxHealth = h;
-    inventory = new Inventory[limit];
+Player::Player(string n, int h, int ap, int limit, Inventory inventory) : name(n), health(h), attackPower(ap), maxHealth(limit), inventory(10) {
 }
 
 Player::~Player() {
     cout << "The object for Player " << name << " has been destroyed." << endl;
-    delete [] inventory;
 }
 
 void Player::takeDamage(int damage) {
@@ -54,10 +47,12 @@ void Player::displayStatus() const {
 }
 
 void Player::showInventory() const {
-    inventory->display();
+    // inventory->display();
+    inventory.display();
 }
 
 void Player::addItem(const Item& item) {
-    inventory->addItem(item);
+    // inventory->addItem(item);
+    inventory.addItem(item);
 }
 

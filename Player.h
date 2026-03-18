@@ -12,11 +12,11 @@ class Player {
         int health;
         int maxHealth;
         int attackPower;
-        Inventory *inventory;
+        Inventory inventory;
 
     public: 
         Player(); // default constructor
-        Player(string name, int health, int attackPower, int limit); // overloaded constructor
+        Player(string name, int health, int attackPower, int limit, Inventory inventory); // overloaded constructor
         ~Player();
         void takeDamage(int damage);
         string getName() const;
