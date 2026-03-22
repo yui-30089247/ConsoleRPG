@@ -18,7 +18,7 @@ class Player {
 
     public: 
         Player(); // default constructor
-        Player(string name, int health, int attackPower, int limit, Inventory inventory); // overloaded constructor
+        Player(string name, int health, int attackPower, int limit, Inventory inventory, int x, int y); // overloaded constructor
         ~Player();
         void takeDamage(int damage);
         string getName() const;

@@ -11,7 +11,7 @@ Player::Player() {
     attackPower = 10;
 }
 
-Player::Player(string n, int h, int ap, int limit, Inventory inventory) : name(n), health(h), attackPower(ap), maxHealth(limit), inventory(10) {
+Player::Player(string n, int h, int ap, int limit, Inventory inventory, int x, int y) : name(n), health(h), attackPower(ap), maxHealth(limit), inventory(10), x(x), y(y) {
 }
 
 Player::~Player() {
