@@ -13,6 +13,8 @@ class Player {
         int maxHealth;
         int attackPower;
         Inventory inventory;
+        int x;
+        int y;
 
     public: 
         Player(); // default constructor
@@ -26,6 +28,10 @@ class Player {
         void displayStatus() const;
         void showInventory() const;
         void addItem(const Item& item);
+        int getX() const;
+        int getY() const;
+        void setX(int x);
+        void setY(int y);
 };
 
 #endif
