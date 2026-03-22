@@ -19,3 +19,10 @@ Map::Map(int width, int height, Player* player) {
         }
     }
 }
+
+Map::~Map() {
+    for (int i = 0; i < height; i++) {
+        delete [] grid[i];
+    }
+    delete [] grid;
+}
